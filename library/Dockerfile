@@ -1,5 +1,5 @@
 # Используем официальный образ OpenJDK
-FROM eclipse-temurin:17-jdk-alpine
+FROM OpenJDK
 
 # Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /library
