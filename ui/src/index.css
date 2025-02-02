@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: #2A1B3D;
+    padding: 20px;
+}
+
+@layer components {
+    .app-nav-bar {
+        @apply flex mb-[15px]
+    }
+
+    .app-nav-bar a {
+        @apply font-semibold font-mono tracking-normal text-center text-[20px] text-thirdly mx-[3px] px-[2px] py-[1px] place-self-center
+    }
+}

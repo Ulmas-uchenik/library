@@ -1,0 +1,56 @@
+networks:
+  dev:
+
+services:
+  api:
+    image: my-spring-boot-app
+    build: ./library
+    ports:
+      - '9090:9090'
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mydb
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+    networks:
+      - dev
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+      DB_USER: dbUser
+      DB_PASSWORD: dbPassrowd
+      DB_NAME: dbDbName
+    ports:
+      - '5432:5432'
+    networks:
+      - dev
+
+  pgadmin:
+    container_name: posgtres-admin
+    image: 'dpage/pgadmin4'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: adming@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - '80:80'
+      
+  ui:
+    build: ./ui
+    container_name: react-ui
+    ports:
+      - '5173:5173'
+    volumes:
+      - ./ui:/app
+      - /app/node_modules
+    expose:
+      - 5173
+    networks:
+     - dev
+
+    stdin_open: true
+    tty: true

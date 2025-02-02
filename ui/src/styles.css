@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer bookComponent {
+  .book-container {
+    @apply flex-shrink-0 snap-start space-y-[7px] p-[5px] m-[5px] size-[15%];
+  }
+
+  .book-grid {
+    @apply grid grid-cols-2;
+  }
+
+  .book-id {
+    @apply text-thirdly px-[5px] place-self-start align-middle font-semibold font-mono tracking-normal border-black border-2 rounded-lg text-center;
+  }
+}
+
+.default-text-block {
+  @apply bg-secondary bg-opacity-60 text-thirdly font-semibold font-mono tracking-normal min-h-[60px] min-w-[170px] border-black border-2 rounded-lg text-center align-middle break-words text-balance;
+}
+
+.input-box {
+  @apply bg-secondary bg-opacity-60 font-semibold text-white font-mono tracking-normal border-black border-2 rounded-lg text-center placeholder:text-thirdly my-[2px]
+}
+
+.nav-bar-buttons-block {
+  @apply bg-secondary bg-opacity-60 font-semibold font-mono tracking-normal border-black border-2 rounded-lg text-center text-[20px] text-thirdly text-wrap w-fit mx-[3px] px-[2px] py-[1px] my-[2px] place-self-center
+}
+
+.default-button-block {
+  @apply bg-secondary bg-opacity-60 font-semibold font-mono tracking-normal border-black border-2 rounded-lg text-center text-thirdly text-wrap w-fit mx-[3px] px-[2px] py-[1px] my-[2px] place-self-center
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Ширина вертикальной полосы прокрутки */
+  height: 8px; /* Высота горизонтальной полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: #b294ff; /* Цвет фона трека */
+  border-radius: 4px; /* Закругление углов трека */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #692eff; /* Цвет ползунка */
+  border-radius: 4px; /* Закругление углов ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9166ff; /* Цвет ползунка при наведении */
+}

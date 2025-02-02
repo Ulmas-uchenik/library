@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.default-div {
+    @apply flex flex-col border-black p-[5px] m-[5px] max-w-fit object-right-top
+}
+
+.register-div {
+    @apply flex flex-col gap-y-1 border-black p-[5px] m-[5px] max-w-fit place-self-center
+}
+
+.register-text {
+    @apply my-2 bg-secondary bg-opacity-60 text-thirdly text-thirdly font-semibold font-mono tracking-normal min-w-fit border-black border-[2px] rounded-lg text-center align-middle break-words text-balance;
+}
+
+.login-div {
+    @apply flex flex-col gap-y-1 border-black p-[5px] m-[5px] max-w-fit place-self-center
+}
+
+.login-text {
+    @apply my-2 bg-secondary bg-opacity-60 text-thirdly text-thirdly font-semibold font-mono tracking-normal min-w-fit border-black border-[2px] rounded-lg text-center align-middle break-words text-balance;
+}
+
+.userInfo-div {
+    @apply bg-secondary bg-opacity-60 text-thirdly font-semibold font-mono tracking-normal min-h-fit max-w-fit px-2 border-black border-2 rounded-lg text-center break-words text-balance;
+}
+
+.userInfo-button {
+    @apply bg-secondary bg-opacity-60 font-semibold font-mono tracking-normal border-black border-2 rounded-lg text-center text-thirdly text-wrap w-fit px-1
+}
