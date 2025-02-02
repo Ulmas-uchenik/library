@@ -1,5 +1,5 @@
 # Используем официальный образ OpenJDK
-FROM openjdk
+FROM openjdk:17
 
 # Устанавливаем рабочую директорию внутри контейнера
 WORKDIR /library
